@@ -43,7 +43,7 @@ const recipeSchema = new mongoose.Schema({
         required:true
     },
     mealType:{
-        type:String,
+        type:Array,
         required:true
     }
     
