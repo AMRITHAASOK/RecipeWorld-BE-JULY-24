@@ -22,3 +22,14 @@ exports.getARecipe=async(req,res)=>{
         res.status(406).json(err)  
     }
 }
+exports.getRelatedRecipe=async(req,res)=>{
+    console.log("Inside A recipe controller");
+    const cuisine = req.query.cuisine
+    try{
+        const response = await recipes.find({cuisine})
+        res.status(200).json(response)
+    }
+    catch(err){
+        res.status(406).json(err)  
+    }
+}

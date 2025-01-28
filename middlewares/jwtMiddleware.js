@@ -10,6 +10,8 @@ const jwtMiddleware=(req,res,next)=>{
              jwtVerification = jwt.verify(token,process.env.jwtKey)
             console.log(jwtVerification); 
             req.payload = jwtVerification.userId
+            console.log(req.payload);
+            
             next();
         }
         else{
