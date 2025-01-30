@@ -44,4 +44,15 @@ router.get("/getSavedRecipe",jwtMiddleware,savedController.getAllSavedRecipes)
 //http://localhost:3000/deleteSavedRecipe/679863fc9440b02621f58731
 router.delete("/deleteSavedRecipe/:id",jwtMiddleware,savedController.deleteSavedRecipes)
 
+//http://localhost:3000/allDownloadList
+router.get("/allDownloadList",downloadController.getDownloadedList)
+
+//http://localhost:3000/allUserList
+router.get("/allUserList",userController.getUserList)
+
+//http://localhost:3000/allTestimonies
+router.get("/allTestimonies",testimonyController.getTestimonyList)
+
+
+
 module.exports = router

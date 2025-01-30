@@ -51,3 +51,14 @@ exports.login=async(req,res)=>{
     
 }
 
+exports.getUserList=async(req,res)=>{
+    console.log("Inside UserList controller");
+    
+    try{
+        const response = await users.find()
+        res.status(200).json(response)
+    }
+    catch(err){
+        res.status(406).json(err)  
+    }
+}

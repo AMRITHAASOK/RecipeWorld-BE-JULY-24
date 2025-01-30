@@ -28,3 +28,16 @@ exports.addToDownload=async(req,res)=>{
     res.status(406).json(err)  
 }
 }
+
+
+exports.getDownloadedList=async(req,res)=>{
+    console.log("Inside downloadList controller");
+    
+    try{
+        const response = await downloads.find()
+        res.status(200).json(response)
+    }
+    catch(err){
+        res.status(406).json(err)  
+    }
+}
