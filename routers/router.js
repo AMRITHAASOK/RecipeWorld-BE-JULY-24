@@ -53,6 +53,8 @@ router.get("/allUserList",userController.getUserList)
 //http://localhost:3000/allTestimonies
 router.get("/allTestimonies",testimonyController.getTestimonyList)
 
+//http://localhost:3000/updateTestimony/6758769?status=Approved
+router.get("/updateTestimony/:id",testimonyController.updateTestimony)
 
 
 module.exports = router
